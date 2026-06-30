@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta name="facebook-domain-verification" content="" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JOSÉ FERNANDO FERREIRA DA SILVA</title>
+  <meta name="og:title" content="JOSÉ FERNANDO FERREIRA DA SILVA" />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="JOSÉ FERNANDO FERREIRA DA SILVA" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #122340;
+      --accent: #e0a526;
+      --accent-dark: #b9840f;
+      --light-bg: #f5f6f8;
+      --white: #ffffff;
+      --text: #1c2230;
+      --muted: #5d6470;
+      --border: #dfe2e8;
+      --footer-bg: #0c1726;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 60px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .nav-brand .logo-initial {
+      background: var(--accent);
+      color: var(--primary);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+    #home {
+      background: linear-gradient(135deg, var(--primary) 0%, #1d3a63 100%);
+      color: var(--white);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    #home h1 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    #home p {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent-dark); color: var(--white); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+
+    /* SECTIONS */
+    section { padding: 4rem 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      line-height: 1.25;
+    }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* SOBRE */
+    #sobre { background: var(--light-bg); }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+    @media (max-width: 640px) { .sobre-grid { grid-template-columns: 1fr; } }
+    .sobre-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .sobre-box h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-dark);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+    .sobre-box p { font-size: 0.95rem; }
+
+    /* SERVIÇOS */
+    #servicos { background: var(--white); }
+    .services-list {
+      list-style: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .services-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .services-list li::before {
+      content: "✔";
+      color: var(--accent-dark);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* DADOS */
+    #dados { background: var(--light-bg); }
+    .dados-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .dados-table tr { border-bottom: 1px solid var(--border); }
+    .dados-table tr:last-child { border-bottom: none; }
+    .dados-table td {
+      padding: 0.85rem 1.1rem;
+      font-size: 0.93rem;
+    }
+    .dados-table td:first-child {
+      font-weight: 700;
+      color: var(--primary);
+      width: 38%;
+      background: #e9edf3;
+    }
+    .dados-table td:last-child { color: var(--text); }
+    .dados-table a { color: var(--accent-dark); }
+
+    /* SÓCIOS */
+    #socios { background: var(--white); }
+    .socio-card {
+      margin-top: 2rem;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .socio-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .socio-card h3 { font-size: 1rem; color: var(--primary); margin-bottom: 0.2rem; }
+    .socio-card p { font-size: 0.9rem; margin-bottom: 0; }
+
+    /* MISSÃO */
+    #missao { background: var(--primary); color: var(--white); }
+    #missao h2 { color: var(--white); }
+    #missao p { color: rgba(255,255,255,0.78); }
+    .missao-highlight {
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.07);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.2rem 1.4rem;
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* CONTATO */
+    #contato-section { background: var(--light-bg); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 800px) { .contato-grid { grid-template-columns: 1fr; } }
+    .contato-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+    }
+    .contato-card h3 { font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .contato-card p { font-size: 0.93rem; }
+    .contato-card a { color: var(--accent-dark); text-decoration: none; }
+
+    /* FOOTER */
+    footer {
+      background: var(--footer-bg);
+      color: rgba(255,255,255,0.6);
+      padding: 2rem;
+      font-size: 0.82rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,0.85); }
+    .footer-links {
+      margin-top: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.85); }
+    .back-top {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: var(--white);
+      border-radius: 10px;
+      max-width: 660px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+    }
+    .modal-box h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .modal-box h3 { font-size: 0.95rem; color: var(--accent-dark); margin: 1.2rem 0 0.4rem; }
+    .modal-box p, .modal-box li { font-size: 0.88rem; color: var(--muted); }
+    .modal-box ul { padding-left: 1.2rem; }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: none; border: none;
+      font-size: 1.3rem; cursor: pointer; color: var(--muted);
+    }
+
+    /* MOBILE NAV */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      nav { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="home">
+  <a class="nav-brand" href="#home">
+    <span class="logo-initial">J</span>
+    JOSÉ FERNANDO FERREIRA DA SILVA
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Atividades</a></li>
+    <li><a href="#dados">Dados oficiais</a></li>
+    <li><a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-nav" target="_blank" rel="noopener">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero-section">
+  <div id="home" style="padding:5rem 2rem 4rem; background:linear-gradient(135deg, #122340 0%, #1d3a63 100%); color:#fff; text-align:center;">
+    <h1>JOSÉ FERNANDO FERREIRA DA SILVA</h1>
+    <p>Comércio varejista de artigos de óptica, com atuação diversificada em manutenção, reparação e venda de produtos para o dia a dia em Canaã dos Carajás/PA.</p>
+    <p style="color:rgba(255,255,255,0.82); max-width:680px; margin:0 auto 2rem;">Nosso compromisso é oferecer variedade, qualidade e atendimento próximo, atuando em múltiplos segmentos para atender diferentes necessidades de nossos clientes.</p>
+    <div class="hero-btns">
+      <a href="#servicos" class="btn-primary">Ver atividades</a>
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-secondary" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container">
+    <div class="section-label">QUEM SOMOS?</div>
+    <h2>Quem somos</h2>
+    <p>A empresa <strong>37.479.621 Jose Fernando Ferreira da Silva</strong>, registrada sob o CNPJ 37.479.621/0001-00, foi fundada em 21/06/2020 na cidade de Canaã dos Carajás, no estado do Pará.</p>
+    <p>Sua atividade principal, conforme a Receita Federal, é o comércio varejista de artigos de óptica, complementada por um amplo conjunto de atividades secundárias que vão de manutenção e reparação de equipamentos a comércio varejista de vestuário, cosméticos, joalheria, relojoaria, artigos esportivos, bebidas e muito mais. Conforme cadastro público, é constituída como Empresário Individual, enquadrada como Microempreendedor Individual (MEI) e optante pelo Simples Nacional desde 01/01/2023.</p>
+    <div class="sobre-grid">
+      <div class="sobre-box">
+        <h3>Nossa atuação</h3>
+        <p>Atuamos em diversas frentes — do comércio varejista à manutenção e reparação de equipamentos — sempre com atenção às necessidades de cada cliente, buscando qualidade e confiança em cada atendimento.</p>
+      </div>
+      <div class="sobre-box">
+        <h3>Endereço cadastral</h3>
+        <p>Cond. Residencial Jardins dos Lagos, 204<br>Bairro Canaã dos Carajás<br>Canaã dos Carajás – PA, CEP 68537-000</p>
+        <p style="margin-top:0.8rem;">Valorizamos relações de confiança, comunicação clara e compromisso com a excelência em cada atendimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATIVIDADES -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-label">O QUE FAZEMOS</div>
+    <h2>Nossas atividades</h2>
+    <ul class="services-list">
+      <li>Comércio varejista de artigos de óptica</li>
+      <li>Manutenção e reparação de geradores, transformadores e motores elétricos</li>
+      <li>Instalação de máquinas e equipamentos industriais</li>
+      <li>Atividades de estética e outros serviços de cuidados com a beleza</li>
+      <li>Serviços de manutenção e reparação mecânica de veículos automotores</li>
+      <li>Comércio varejista de artigos do vestuário e acessórios</li>
+      <li>Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal</li>
+      <li>Comércio varejista de objetos de arte</li>
+      <li>Comércio varejista de outros produtos não especificados anteriormente</li>
+      <li>Comércio varejista de artigos de relojoaria</li>
+      <li>Comércio varejista de artigos esportivos</li>
+      <li>Manutenção e reparação de equipamentos hidráulicos e pneumáticos, exceto válvulas</li>
+      <li>Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação</li>
+      <li>Comércio varejista de artigos de joalheria</li>
+      <li>Comércio varejista de artigos de cama, mesa e banho</li>
+      <li>Comércio varejista de bebidas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DADOS OFICIAIS -->
+<section id="dados">
+  <div class="container">
+    <div class="section-label">REGISTRO PÚBLICO</div>
+    <h2>Dados oficiais</h2>
+    <table class="dados-table">
+      <tr><td>Razão Social</td><td>37.479.621 Jose Fernando Ferreira da Silva</td></tr>
+      <tr><td>CNPJ</td><td>37.479.621/0001-00</td></tr>
+      <tr><td>Data de Abertura</td><td>21/06/2020 (6 anos e 9 dias)</td></tr>
+      <tr><td>Porte</td><td>Microempreendedor Individual (MEI)</td></tr>
+      <tr><td>Natureza Jurídica</td><td>Empresário (Individual)</td></tr>
+      <tr><td>Opção pelo MEI</td><td>Sim</td></tr>
+      <tr><td>Opção pelo Simples</td><td>Sim</td></tr>
+      <tr><td>Data Opção Simples</td><td>01/01/2023</td></tr>
+      <tr><td>Capital Social</td><td>R$ 12.000,00</td></tr>
+      <tr><td>Tipo</td><td>Matriz</td></tr>
+      <tr><td>Situação Cadastral</td><td>Ativa</td></tr>
+      <tr><td>Data da Situação</td><td>21/06/2020</td></tr>
+      <tr><td>Atividade Principal (CNAE)</td><td>47.74-1-00 — Comércio varejista de artigos de óptica</td></tr>
+      <tr><td>Atividades Secundárias (CNAE)</td><td>
+        33.13-9-01 — Manutenção e reparação de geradores, transformadores e motores elétricos<br>
+        33.21-0-00 — Instalação de máquinas e equipamentos industriais<br>
+        96.02-5-02 — Atividades de estética e outros serviços de cuidados com a beleza<br>
+        45.20-0-01 — Serviços de manutenção e reparação mecânica de veículos automotores<br>
+        47.81-4-00 — Comércio varejista de artigos do vestuário e acessórios<br>
+        47.72-5-00 — Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal<br>
+        47.89-0-03 — Comércio varejista de objetos de arte<br>
+        47.89-0-99 — Comércio varejista de outros produtos não especificados anteriormente<br>
+        47.83-1-02 — Comércio varejista de artigos de relojoaria<br>
+        47.63-6-02 — Comércio varejista de artigos esportivos<br>
+        33.14-7-02 — Manutenção e reparação de equipamentos hidráulicos e pneumáticos, exceto válvulas<br>
+        47.57-1-00 — Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação<br>
+        47.83-1-01 — Comércio varejista de artigos de joalheria<br>
+        47.55-5-03 — Comércio varejista de artigos de cama, mesa e banho<br>
+        47.23-7-00 — Comércio varejista de bebidas
+      </td></tr>
+      <tr><td>Endereço</td><td>Cond. Residencial Jardins dos Lagos, 204, Bairro Canaã dos Carajás, Canaã dos Carajás – PA, CEP 68537-000</td></tr>
+      <tr><td>Município</td><td><a href="https://cnpj.biz/empresas/canaa-dos-carajas-pa" target="_blank" rel="noopener">Canaã dos Carajás</a></td></tr>
+      <tr><td>Estado</td><td><a href="https://cnpj.biz/empresas/estado/PA" target="_blank" rel="noopener">Pará</a></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- SÓCIOS -->
+<section id="socios">
+  <div class="container">
+    <div class="section-label">RESPONSÁVEL</div>
+    <h2>Titular</h2>
+    <div class="socio-card">
+      <div class="socio-avatar">J</div>
+      <div>
+        <h3>José Fernando Ferreira da Silva</h3>
+        <p>Titular — Empresário Individual (MEI)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO -->
+<section id="missao">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,0.6);">NOSSA MISSÃO</div>
+    <h2>Nossa missão</h2>
+    <p>A missão da 37.479.621 Jose Fernando Ferreira da Silva é oferecer variedade de produtos e serviços com qualidade e confiança, atuando em diferentes segmentos para atender às necessidades de nossos clientes em Canaã dos Carajás/PA e região.</p>
+    <div class="missao-highlight">
+      Nosso compromisso é transformar versatilidade, atenção ao detalhe e proximidade no atendimento em resultados consistentes, sempre com foco em qualidade, transparência e crescimento sustentável.
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato-section">
+  <div class="container">
+    <div class="section-label">FALE CONOSCO</div>
+    <h2>Contato</h2>
+    <div class="contato-grid">
+      <div class="contato-card">
+        <h3>📞 Telefone</h3>
+        <p><a href="tel:+5500000000000">(00) 00000-0000</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Chamar no WhatsApp →</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>✉️ E-mail</h3>
+        <p><a href="mailto:contato@josefernandoferreira.com.br">contato@josefernandoferreira.com.br</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>37.479.621 JOSE FERNANDO FERREIRA DA SILVA</strong><br>
+  CNPJ: 37.479.621/0001-00 | Data de Abertura: 21/06/2020 | Porte: MEI | Natureza Jurídica: Empresário (Individual) | Situação Cadastral: ATIVA | Tipo: MATRIZ | Capital Social: R$ 12.000,00 | Endereço: Cond. Residencial Jardins dos Lagos, 204, Canaã dos Carajás – PA, CEP 68537-000 | E-mail: contato@josefernandoferreira.com.br<br><br>
+  ©️ 2026 José Fernando Ferreira da Silva. Todos os direitos reservados.
+  <div class="footer-links">
+    <a href="#" id="privacy-link">Política de Privacidade</a>
+    <a href="#home" class="back-top">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<!-- MODAL PRIVACIDADE -->
+<div class="modal-overlay" id="privacy-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn">✕</button>
+    <h2>Política de Privacidade</h2>
+    <p><strong>37.479.621 JOSE FERNANDO FERREIRA DA SILVA</strong><br>
+    CNPJ: 37.479.621/0001-00<br>
+    Endereço: Cond. Residencial Jardins dos Lagos, 204, Canaã dos Carajás – PA, CEP 68537-000</p>
+
+    <h3>1. Finalidade</h3>
+    <p>Esta Política de Privacidade descreve como a 37.479.621 Jose Fernando Ferreira da Silva coleta, utiliza, armazena e protege dados pessoais de clientes, parceiros, fornecedores e usuários que interagem conosco por meio de nossos canais de comunicação ou durante a contratação e execução de nossos serviços.</p>
+
+    <h3>2. Dados Coletados</h3>
+    <p>Coletamos apenas os dados necessários para as finalidades descritas nesta política, incluindo:</p>
+    <ul>
+      <li>Nome, e-mail, telefone, dados profissionais e informações empresariais (CPF ou CNPJ), quando necessário;</li>
+      <li>Registros de comunicação, contratos, propostas e histórico de atendimento;</li>
+      <li>Dados de navegação (quando aplicável), conforme políticas das plataformas utilizadas.</li>
+    </ul>
+
+    <h3>3. Uso dos Dados</h3>
+    <p>Os dados pessoais coletados são utilizados para:</p>
+    <ul>
+      <li>Prestação e gestão dos serviços e produtos comercializados;</li>
+      <li>Comunicação operacional, administrativa e contratual;</li>
+      <li>Cumprimento de obrigações legais e regulatórias;</li>
+      <li>Melhoria contínua dos serviços e processos internos.</li>
+    </ul>
+
+    <h3>4. Compartilhamento de Dados</h3>
+    <p>Não comercializamos dados pessoais. O compartilhamento ocorre apenas com parceiros essenciais à execução dos serviços, mediante confidencialidade, ou quando exigido por lei, ordem judicial ou autoridade competente.</p>
+
+    <h3>5. Direitos do Titular (LGPD)</h3>
+    <p>Nos termos da LGPD (Lei nº 13.709/2018), o titular pode solicitar confirmação de tratamento, acesso, correção, anonimização, bloqueio, eliminação, portabilidade e revogação de consentimentos.</p>
+
+    <h3>6. Armazenamento e Segurança</h3>
+    <p>Adotamos medidas técnicas e administrativas adequadas para proteger os dados pessoais contra acessos não autorizados, perdas ou divulgações indevidas.</p>
+
+    <h3>7. Contato</h3>
+    <p>📞 Telefone: (00) 00000-0000<br>✉️ E-mail: contato@josefernandoferreira.com.br</p>
+
+    <p style="margin-top:1.2rem; font-size:0.8rem;">37.479.621 JOSE FERNANDO FERREIRA DA SILVA — CNPJ 37.479.621/0001-00 — ©️ 2026. Todos os direitos reservados.</p>
+  </div>
+</div>
+
+<script>
+  const privacyLink = document.getElementById('privacy-link');
+  const privacyModal = document.getElementById('privacy-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+
+  privacyLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    privacyModal.classList.add('active');
+  });
+  modalCloseBtn.addEventListener('click', () => {
+    privacyModal.classList.remove('active');
+  });
+  privacyModal.addEventListener('click', (e) => {
+    if (e.target === privacyModal) privacyModal.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
